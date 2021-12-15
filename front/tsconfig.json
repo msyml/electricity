@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    // 设置JS语言版本
+    "target": "esnext",
+    // 指定生成的模块
+    "module": "esnext",
+    "moduleResolution": "node",
+    // 是否启用严格模式
+    "strict": true,
+    // 创建映射文件
+    "sourceMap": true,
+    // 启用导入json
+    "resolveJsonModule": true,
+    // 启用对CommonJs的支持
+    "esModuleInterop": true,
+    // 当索引缺乏索引签名的对象时，禁止' noImplicitAny '错误。 对象枚举赋值报错解决
+    "suppressImplicitAnyIndexErrors": true,
+    "lib": ["esnext", "dom"],
+    // 指定不在源文件中，但是要包含进去的类型包名
+    "types": ["vite/client"],
+    "typeRoots": ["./node_modules/@types/", "./types"],
+    // 解析非相对模块名的基准目录
+    "baseUrl": ".",
+    // 模块名到基于 baseUrl的路径映射的列表。
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "types/*.ts"]
+}
