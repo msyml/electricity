@@ -37,6 +37,7 @@ onMounted(() => {
 
 <style scoped lang="less">
 @bgColor: #eaeaea;
+@fontColor: #cccccc;
 
 .header {
   .shortcut {
@@ -46,11 +47,11 @@ onMounted(() => {
     .shortcuts {
       .shortcut_btn {
         float: left;
-        color: #cccccc;
+        color: @fontColor;
       }
       .shortcut_btn ~ .shortcut_btn:before {
         content: '|';
-        color: #cccccc;
+        color: @fontColor;
       }
       .shortcut_btn_red {
         color: #f00;
